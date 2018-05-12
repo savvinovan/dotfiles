@@ -8,14 +8,19 @@ Plug 'easymotion/vim-easymotion'
 Plug 'airblade/vim-gitgutter'
 Plug 'kien/ctrlp.vim'
 Plug 'rking/ag.vim'
-"colorschemes
-Plug 'morhetz/gruvbox'
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-rails'
+
+
+" Colorschemes
+" Plug 'morhetz/gruvbox'
+Plug 'nanotech/jellybeans.vim'
 
 call plug#end()
 
 syntax on
 let g:mapleader=','
-colorscheme gruvbox
+colorscheme jellybeans 
 set background=dark
 set number
 set expandtab
@@ -23,7 +28,7 @@ set tabstop=2
 set hlsearch
 set incsearch
 
-"mappings
+""mappings
 
 map <C-n> :NERDTreeToggle<CR>
 map <Leader> <Plug>(easymotion-prefix)
@@ -35,22 +40,42 @@ map <silent> <C-l> :call WinMove('l')<CR>
 
 
 function! WinMove(key) 
-  let t:curwin = winnr() 
-  exec "wincmd ".a:key
-  if (t:curwin == winnr())
-    if (match(a:key,'[jk]'))
-      wincmd v
-    else
-      wincmd s
-    endif
-    exec "wincmd ".a:key
-  endif
+let t:curwin = winnr() 
+exec "wincmd ".a:key
+if (t:curwin == winnr())
+if (match(a:key,'[jk]'))
+wincmd v
+ else
+wincmd s
+endif
+exec "wincmd ".a:key
+endif
 endfunction
 
 filetype plugin indent on
-" show existing tab with 4 spaces width
+" show existing
+" tab with 4
+" spaces width
 set tabstop=2
-" when indenting with '>', use 4 spaces width
+" with '>', use 4
+" spaces width
 set shiftwidth=2
-" On pressing tab, insert 4 spaces
+" On pressing
+" tab, insert 4
+" spaces
 set expandtab
+
+set cc=120
+
+set list listchars=tab:»·,trail:·
+
+augroup myfiletypes
+  " Clear old autocmds in group
+  autocmd!
+  " autoindent with two spaces, always expand tabs
+  autocmd FileType ruby,eruby,yaml setlocal ai sw=2 sts=2 et
+  autocmd FileType ruby,eruby,yaml setlocal path+=lib
+  autocmd FileType ruby,eruby,yaml setlocal colorcolumn=80
+  " Make ?s part of words
+  autocmd FileType ruby,eruby,yaml setlocal iskeyword+=?
+augroup END
