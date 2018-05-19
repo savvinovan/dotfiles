@@ -14,6 +14,7 @@ chpwd() {
 plugins=(
   git
   dotenv
+  vi-mode
 )
 
 source $ZSH/oh-my-zsh.sh
