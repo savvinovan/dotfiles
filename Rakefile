@@ -10,6 +10,8 @@ task :install do
     link_file(file)
     puts "Created..."
   end
+  sync_nvim_config
+  puts "Nvim synced with vim..."
 end
 
 def move_file(file)
@@ -18,4 +20,10 @@ end
 
 def link_file(file)
   system %Q{ln -s "$PWD/#{file}" "$HOME/.#{file}"}
+end
+
+def sync_nvim_config
+  system %Q(mkdir "$HOME/.config")
+  system %Q(mkdir "$HOME/.config/nvim")
+  system %Q(ln -s "$PWD/init.vim" "$HOME/.config/nvim/init.vim")
 end

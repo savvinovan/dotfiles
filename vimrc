@@ -10,6 +10,7 @@ Plug 'kien/ctrlp.vim'
 Plug 'rking/ag.vim'
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
+Plug 'vim-airline/vim-airline'
 
 
 " Colorschemes
@@ -28,7 +29,7 @@ set tabstop=2
 set hlsearch
 set incsearch
 
-""mappings
+" mappings
 
 map <C-n> :NERDTreeToggle<CR>
 map <Leader> <Plug>(easymotion-prefix)
