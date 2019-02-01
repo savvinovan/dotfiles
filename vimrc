@@ -11,6 +11,7 @@ Plug 'rking/ag.vim'
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-rails'
 Plug 'vim-airline/vim-airline'
+Plug 'tpope/vim-surround'
 
 
 " Colorschemes
