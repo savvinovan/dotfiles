@@ -24,8 +24,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 prompt_context () {}
-echo '         /\_/\'
-echo '    ____/ o o \'
-echo '  /~____  =ø= /'
-echo ' (______)__m_m)'
-echo ' Pushochek '
+#echo '         /\_/\'
+#echo '    ____/ o o \'
+#echo '  /~____  =ø= /'
+#echo ' (______)__m_m)'
+#echo ' Pushochek '
