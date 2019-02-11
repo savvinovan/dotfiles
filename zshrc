@@ -3,6 +3,11 @@
 
 # Path to your oh-my-zsh installation.
   export ZSH=$HOME/.oh-my-zsh
+  export PATH=$HOME/Downloads/GoLand-2018.3.3/bin:$PATH
+  export PATH=$PATH:$GOPATH/bin
+  export GOPATH=$HOME/Projects/gopath
+
+alias hm="hostname"
 
 ZSH_THEME="agnoster"
 
@@ -15,6 +20,8 @@ plugins=(
   git
   dotenv
   vi-mode
+  docker
+  docker-compose
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -24,8 +31,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 prompt_context () {}
-#echo '         /\_/\'
-#echo '    ____/ o o \'
-#echo '  /~____  =ø= /'
-#echo ' (______)__m_m)'
-#echo ' Pushochek '
+base64 -d <<<"ICAgICAgICAgICAgLC1+wqheICBewqgtLCAgICAgICAgICAgXywKICAgICAgICAgICAvICAgICAgICAgIC8gO14tLl8uLi4swqgvCiAgICAgICAgICAvICAgICAgICAgIC8gLyAgICAgICAgIC8KICAgICAgICAgLyAgICAgICAgICAvIC8gICAgICAgICAvCiAgICAgICAgLyAgICAgICAgICAvIC8gICAgICAgICAvCiAgICAgICAvLC4tOicnLSxfIC8gLyAgICAgICAgIC8KICAgICAgIF8sLi06LS0uXyBeIF46LS5fIF9fLi4vCiAgICAgL14gICAgICAgICAvIC/CqDouLl/CqF9fLjsKICAgIC8gICAgICAgICAgLyAvICAgICAgXiAgLwogICAvICAgICAgICAgIC8gLyAgICAgICAgIC8KICAvICAgICAgICAgIC8gLyAgICAgICAgIC8KIC9fLC4tLTpeLS5fLyAvICAgICAgICAgLwpeICAgICAgICAgICAgXsKowqgtLl9fXy46XiA="
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
