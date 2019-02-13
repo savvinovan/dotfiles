@@ -8,6 +8,7 @@
   export GOPATH=$HOME/Projects/gopath
 
 alias hm="hostname"
+alias sk="cat ~/.ssh/id_rsa.pub"
 
 ZSH_THEME="agnoster"
 
