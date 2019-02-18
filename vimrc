@@ -20,6 +20,7 @@ Plug 'nanotech/jellybeans.vim'
 
 call plug#end()
 
+set encoding=utf-8
 syntax on
 let g:mapleader=','
 colorscheme jellybeans 
