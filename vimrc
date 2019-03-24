@@ -13,7 +13,6 @@ Plug 'tpope/vim-rails'
 Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-surround'
 
-
 " Colorschemes
 " Plug 'morhetz/gruvbox'
 Plug 'nanotech/jellybeans.vim'

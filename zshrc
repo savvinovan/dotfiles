@@ -10,6 +10,13 @@
 
 alias hm="hostname"
 alias sk="cat ~/.ssh/id_rsa.pub"
+alias lc='colorls -lA --sd'
+# Open modified files
+# ACMR = Added || Copied || Modified || Renamed
+alias v="vim"
+alias vd="vim \$(git diff HEAD --name-only --diff-filter=ACMR)"
+alias vds="vim \$(git diff --staged --name-only --diff-filter=ACMR)"
+alias vdc="vim \$(git diff HEAD^ --name-only --diff-filter=ACMR)"
 
 ZSH_THEME="agnoster"
 
@@ -43,3 +50,4 @@ else
 fi
 
 if [ -f /usr/bin/screenfetch ]; then screenfetch; fi
+
