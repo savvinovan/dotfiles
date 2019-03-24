@@ -7,6 +7,7 @@
   export PATH=$HOME/Downloads/RubyMine-2018.3.3/bin/:$PATH
   export PATH=$PATH:$GOPATH/bin
   export GOPATH=$HOME/Projects/gopath
+  export PATH=$PATH:/home/savvinovan/.gem/ruby/2.6.0/bin
 
 alias hm="hostname"
 alias sk="cat ~/.ssh/id_rsa.pub"
@@ -40,14 +41,14 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 prompt_context () {}
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+#export PATH="$HOME/.rbenv/bin:$PATH"
+#eval "$(rbenv init -)"
 
 if [ -f ./zshalias ]; then
     source ./zshalias
-else
-    print "404: ./zshalias not found."
 fi
 
-if [ -f /usr/bin/screenfetch ]; then screenfetch; fi
+if [ -f /usr/bin/screenfetch ]; 
+  then screenfetch; 
+fi
 
