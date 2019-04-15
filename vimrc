@@ -21,7 +21,7 @@ call plug#end()
 
 set encoding=utf-8
 syntax on
-let g:mapleader=','
+let g:mapleader=' '
 colorscheme jellybeans 
 set background=dark
 set number
