@@ -18,7 +18,8 @@ alias v="vim"
 alias vd="vim \$(git diff HEAD --name-only --diff-filter=ACMR)"
 alias vds="vim \$(git diff --staged --name-only --diff-filter=ACMR)"
 alias vdc="vim \$(git diff HEAD^ --name-only --diff-filter=ACMR)"
-alias bol="cd /Users/aleksandr/Projects/gopath/src/gitlab.com/yktru/mvp/boltalka/boltalka-backend"
+alias bol="cd /Users/aleksandr/Projects/go/boltalka-backend"
+alias boldoc="cd /Users/aleksandr/Projects/go/boltalka-docs"
 alias gitl="git log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all"
 alias gpg="gpg --keyserver keys.gnupg.net"
 alias readlink=greadlink
@@ -63,3 +64,6 @@ POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
 POWERLEVEL9K_MODE='awesome-fontconfig'
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
