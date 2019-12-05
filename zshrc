@@ -8,7 +8,7 @@
   export PATH=$PATH:$GOPATH/bin
   export GOPATH=$HOME/Projects/gopath
   export PATH=$PATH:/home/savvinovan/.gem/ruby/2.6.0/bin
-source $HOME/.cargo/env
+  export PATH=$HOME/.cargo/bin:$PATH
 
 alias hm="hostname"
 alias sk="cat ~/.ssh/id_rsa.pub"
